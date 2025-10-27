@@ -1,0 +1,111 @@
+/* Custom styles to complement Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;600&display=swap');
+
+.font-cinzel {
+    font-family: 'Cinzel', serif;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-navy {
+    background-color: #1a202c;
+}
+
+.text-gold {
+    color: #d4af37;
+}
+
+.bg-yellow-900 {
+    background-color: #7c2d12;
+}
+
+.border-gold {
+    border-color: #d4af37;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+.quote-slide-in {
+    animation: quoteSlideIn 1s ease-in-out;
+}
+
+.quote-slide-out {
+    animation: quoteSlideOut 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes quoteSlideIn {
+    0% { transform: translateX(-20px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes quoteSlideOut {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(20px); opacity: 0.3; }
+}
+
+/* Hover effects for non-mobile devices */
+@media (hover: hover) {
+    #quote-display:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        color: #ff6666;
+        transition: all 0.3s ease;
+    }
+
+    .bg-gray-900:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    #quotes .max-w-4xl:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Slideshow styles for landing page */
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #1a202c; /* Fallback background color */
+    animation: slideshow 30s infinite ease-in-out;
+}
+
+@keyframes slideshow {
+    0% { background-image: url('pics/Lmg1.avif'); opacity: 0.9; }
+    18.75% { background-image: url('pics/Lmg2.avif'); opacity: 0.9; }
+    25% { background-image: url('pics/Lmg3.avif'); opacity: 0.9; }
+    43.75% { background-image: url('pics/Lmg4.avif'); opacity: 0.9; }
+    50% { background-image: url('pics/Lmg5.avif'); opacity: 0.9; }
+    68.75% { background-image: url('pics/Lmg6.avif'); opacity: 0.9; }
+    75% { background-image: url('pics/Lmg7.avif'); opacity: 0.9; }
+    93.75% { background-image: url('pics/Lmg8.avif'); opacity: 0.9; }
+    100% { background-image: url('pics/LmgV.avif'); opacity: 0.9; }
+}
